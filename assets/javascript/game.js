@@ -35,18 +35,18 @@ document.onkeyup = function (event) {
     }
     else {
       losses++;
-      // guesses = guesses - 1;
+   
       guesses--;
     }
 
     directionsText.textContent = "";
     userChoiceText.textContent = "You chose: " + userGuess;
     computerChoiceText.textContent = "The computer chose: " + computerGuess;
-    winsText.textContent = "wins: " + wins;
-    lossesText.textContent = "losses: " + losses;
-    guessesText.textContent = "guesses left: " + guesses;
+    winsText.textContent = "Wins: " + wins;
+    lossesText.textContent = "Losses: " + losses;
+    guessesText.textContent = "Guesses left: " + guesses;
 
-    if (guesses === 0) {
+    if (guesses === -1) {
       alert("No more guesses! Start Over")
 
       guesses = 10;
